@@ -35,6 +35,8 @@ class Scratch3MotionBlocks {
             motion_xposition: this.getX,
             motion_yposition: this.getY,
             motion_direction: this.getDirection,
+            //Advanced Scratch 3 blocks
+            motion_radians: this.useRadians
             // Legacy no-op blocks:
             motion_scroll_right: () => {},
             motion_scroll_up: () => {},
@@ -42,6 +44,12 @@ class Scratch3MotionBlocks {
             motion_xscroll: () => {},
             motion_yscroll: () => {}
         };
+    }
+    
+    useRadians (args, util) {
+        const radians = MathUtil.degToRad(90 - util.target.direction);
+        
+        return radians
     }
 
     getMonitored () {

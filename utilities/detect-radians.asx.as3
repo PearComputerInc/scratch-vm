@@ -1,0 +1,5 @@
+|sprite = permament-obj
+|when play pressed{
+  |say (%|join (%radians%) and (" radians were detected.")%)
+  |say (%|join (%line ("3") compile time [seconds]%) and (" seconds to compile.")%)
+}
